@@ -1,4 +1,3 @@
-import { Conta } from './model/Conta';
 import { ContaCorrente } from './model/ContaCorrente';
 import { ContaPoupanca } from './model/ContaPoupanca';
 import { colors } from './util/Colors';
@@ -8,13 +7,6 @@ import leia from 'readline-sync';
 export function main() {
     
     let opcao: number;
-
-    const conta: Conta = new Conta(1, 123, 1, "Adriana", 10000);
-    conta.visualizar();
-    conta.sacar(10500);
-    conta.visualizar();
-    conta.depositar(5000);
-    conta.visualizar();
 
     const contacorrente: ContaCorrente = new ContaCorrente(2, 123, 1, "Mariana", 15000, 1000);
     contacorrente.visualizar();
@@ -130,11 +122,13 @@ export function main() {
 function sobre(): void {
     console.log(
         `\n
-        ***************************************************
+        **************************************************************
+        
         Projeto Desenvolvido por: Jefferson Carvalho
         Generation Brasil - generation@generation.org
         github.com/conteudoGeneration
-        ***************************************************
+
+        **************************************************************
         `
     )
 }
